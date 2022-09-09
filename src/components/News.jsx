@@ -54,7 +54,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 function News(props) {
   const API_KEY = process.env.REACT_APP_API_KEY;
-  console.log(API_KEY);
   const [articles, setArticles] = useState([]);
   const [search, setSearch] = useState("");
   let [page, setPage] = useState(1);
@@ -65,7 +64,6 @@ function News(props) {
     const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`;
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
     setArticles(data.articles);
   };
   useEffect(() => {
