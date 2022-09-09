@@ -64,6 +64,7 @@ function News(props) {
     const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`;
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     setArticles(data.articles);
   };
   useEffect(() => {
