@@ -54,6 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 function News(props) {
   const API_KEY = process.env.REACT_APP_API_KEY;
+  console.log(API_KEY);
   const [articles, setArticles] = useState([]);
   const [search, setSearch] = useState("");
   let [page, setPage] = useState(1);
